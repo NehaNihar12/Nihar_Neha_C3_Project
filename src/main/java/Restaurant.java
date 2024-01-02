@@ -62,4 +62,9 @@ public class Restaurant {
         return name;
     }
 
+    public double calculateOrderValue(String... itemNames){
+
+        return 0.0;
+    }
+
 }
