@@ -89,5 +89,12 @@ class RestaurantTest {
         double expectedAmount = restaurant.calculateOrderValue("Sweet corn soup","Vegetable lasagne");
         assertEquals(expectedAmount,388.0);
     }
+
+    @Test
+    public void calculateOrderValue_should_return_zero_WithEmptyInput(){
+        double expectedAmount = restaurant.calculateOrderValue();
+        assertEquals(expectedAmount,0.0);
+    }
+
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>ORDER TOTAL<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 }

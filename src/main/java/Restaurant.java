@@ -64,7 +64,15 @@ public class Restaurant {
 
     public double calculateOrderValue(String... itemNames){
 
-        return 0.0;
+        double orderValue = 0.0;
+        for (String itemName : itemNames) {
+            Item item = findItemByName(itemName);
+            if(item!=null){
+                orderValue+= item.getPrice();
+            }
+
+        }
+        return orderValue;
     }
 
 }
